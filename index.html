@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Product Form</title>
+  <script src="js/jquery/jquery-3.6.0.min.js"></script>
+  <script src="js/scripts.js"></script>
+  <link href="css/bootstrap.css" rel="stylesheet">
+  <style>
+      body {
+        padding-top: 60px;
+        background-color: #b3b3b3;
+      }
+  </style>
+  <link href="css/bootstrap-responsive.css" rel="stylesheet">
+</head>
+<body class="container">
+<h1 class="page-header">Billing System</h1>
+  <h2>Product Details</h2>
+  <form id="productForm">
+    <div>
+      <label for="product_name">Product name</label>
+      <input type="text" id="product_name" required/>
+    </div>
+    <div>
+      <label for="product_quantity">Quantity in stock</label>
+      <input type="number" id="product_quantity" required>
+    </div>
+    <div>
+      <label for="price_per_item">Price per item</label>
+      <input type="number" id="price_per_item" required>
+    </div>
+    <button type="submit" class="btn btn-primary">Submit</button>
+    <button type="reset" class="btn btn-primary">Reset</button>
+  </form>
+
+  <h2>Total Bill</h2>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>Product name</th>
+        <th>Quantity in stock</th>
+        <th>Price per item</th>
+        <th>Datetime submitted</th>
+        <th>Total value number</th>
+      </tr>
+    </thead>
+    <tbody id="dataRows"></tbody>
+    <tfoot>
+      <tr>
+        <td colspan="4">Grand Total</td>
+        <td id="total">0</td>
+      </tr>
+    </tfoot>
+  </table>
+</body>
+</html>
+
